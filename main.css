@@ -1,0 +1,80 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #4990E2;
+}
+
+#container{
+	width: 95%;
+	max-width: 1104px;
+	margin: 15% auto;
+}
+#main{
+	width: 60%;
+	float: left;
+	position: relative;	
+}
+
+h1{
+   	font-family: "Avenir Next Bold";
+	color: white;
+	text-transform: uppercase;
+	font-size: 50pt;
+}
+
+p{
+	color: white;
+	font-family: "Avenir Next Regular";
+	font-size: 25pt;
+	margin-bottom: 35px;
+}
+
+@font-face {
+  	font-family: 'Avenir Next Bold';
+  	src: url("fonts/AvenirNextLTPro-Bold.otf");
+}
+
+@font-face {
+  	font-family: 'Avenir Next Regular';
+  	src: url("fonts/AvenirNextLTPro-Regular.otf");
+}
+
+.social-button{
+	width: 43%;
+	margin-right: 20px;
+	height: 65px;
+	border-radius: 10px;
+	float: left;
+}
+
+#facebook img, #twitter img{
+	float: left;
+	margin-right: 10px;
+	margin-top: 22px;
+	margin-left: 20px;
+}
+
+.social-button p{
+	font-size: 15pt;
+	margin-top: 23px;
+}
+
+#facebook{
+	background-color: #3B5998;
+}
+
+#twitter{
+	background-color: #00ACED;
+}
+
+#ext-preview{
+	background-color: white;
+	width: 25%;
+	border-radius: 10px;
+	height: 350px;
+	float: right;
+	margin-top: 10px;
+}
