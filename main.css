@@ -8,28 +8,27 @@ body{
 }
 
 #container{
-	width: 95%;
-	max-width: 1104px;
+	width: 90%;
+	max-width: 1106px;
 	margin: 15% auto;
 }
 #main{
 	width: 60%;
 	float: left;
-	position: relative;	
 }
 
 h1{
    	font-family: "Avenir Next Bold";
 	color: white;
 	text-transform: uppercase;
-	font-size: 50pt;
+	font-size: 5vw;
 }
 
 p{
 	color: white;
 	font-family: "Avenir Next Regular";
-	font-size: 25pt;
-	margin-bottom: 35px;
+	font-size: 3vw;
+	margin-bottom: 30px;
 }
 
 @font-face {
@@ -43,23 +42,24 @@ p{
 }
 
 .social-button{
-	width: 43%;
+	width: 285px;
 	margin-right: 20px;
-	height: 65px;
+	height: 45px;
 	border-radius: 10px;
 	float: left;
+	margin-top: 10px;
+	padding-top: 20px;
 }
 
 #facebook img, #twitter img{
 	float: left;
 	margin-right: 10px;
-	margin-top: 22px;
 	margin-left: 20px;
 }
 
 .social-button p{
 	font-size: 15pt;
-	margin-top: 23px;
+
 }
 
 #facebook{
@@ -72,9 +72,59 @@ p{
 
 #ext-preview{
 	background-color: white;
-	width: 25%;
+	width: 275px;
 	border-radius: 10px;
 	height: 350px;
 	float: right;
 	margin-top: 10px;
+}
+
+@media (min-width: 1106px) {
+
+h1{
+	font-size: 45pt;
+}
+p{
+	font-size: 25pt;
+}
+}
+
+@media (max-width: 700px) {
+	h1{
+		font-size: 30pt;
+	}
+	p{
+		font-size: 18pt;
+	}
+}
+
+@media (max-width: 780px) {
+	#main{
+		float: none;
+		width: 100%;
+	}
+	.social-button{
+		margin: auto;
+		float: none;
+	}
+	#ext-preview{
+		float: none;
+		margin: auto;
+		margin-top: -50px;
+		margin-bottom: 30px;	
+	}
+	h1{
+		text-align: center;	
+	}
+	p{
+		text-align: center;
+		max-width: 60%;
+		margin: auto;
+	}
+	.social-button p{
+		max-width: none;
+	}
+	.social-button{
+		margin-top: 15px;
+	}
 }
