@@ -51,6 +51,11 @@ p{
 	padding-top: 20px;
 }
 
+.social-button:hover{
+	opacity: .87;
+	cursor: pointer;
+}
+
 #facebook img, #twitter img{
 	float: left;
 	margin-right: 10px;
