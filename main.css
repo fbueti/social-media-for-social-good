@@ -56,7 +56,7 @@ p{
 	cursor: pointer;
 }
 
-#facebook img, #twitter img{
+#facebook img, #twitter img, #google img{
 	float: left;
 	margin-right: 10px;
 	margin-left: 20px;
@@ -73,6 +73,10 @@ p{
 
 #twitter{
 	background-color: #00ACED;
+}
+
+#google{
+	background-color: #d74937;
 }
 
 #ext-preview{
