@@ -2,7 +2,9 @@
 	margin: 0;
 	padding: 0;
 }
-
+a{
+	text-decoration: none;
+}
 body{
 	background-color: #4990E2;
 }
@@ -70,6 +72,7 @@ p{
 #download{
 	right: clear;
 	float: none;
+	text-decoration: none;
 }
 
 #facebook, #download{
