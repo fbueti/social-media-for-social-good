@@ -56,7 +56,7 @@ p{
 	cursor: pointer;
 }
 
-#facebook img, #twitter img, #google img{
+#facebook img, #twitter img, #google img, #download img{
 	float: left;
 	margin-right: 10px;
 	margin-left: 20px;
@@ -67,7 +67,12 @@ p{
 
 }
 
-#facebook{
+#download{
+	right: clear;
+	float: none;
+}
+
+#facebook, #download{
 	background-color: #3B5998;
 }
 
@@ -78,6 +83,7 @@ p{
 #google{
 	background-color: #d74937;
 }
+
 
 #ext-preview{
 	background-color: white;
@@ -136,4 +142,17 @@ p{
 	.social-button{
 		margin-top: 15px;
 	}
+}
+
+#signOut{
+	font-size: 12pt;
+	float: bottom;
+	margin-top: 15px;
+}
+#signOut a{
+	text-decoration: underline;
+	color: white;
+}
+.signedIn{
+ display:none;
 }

@@ -1,0 +1,80 @@
+<HTML>
+	<head>
+		<title> Social Media for Social Good </title>
+  		<link rel="stylesheet" href="main.css">
+	</head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<body>
+
+	<div id="container">
+		<div id="ext-preview">
+		</div>
+		<div id="main">
+			<h1> Social Media<br> for Social Good </h1>
+			<p> Donate $1 towards social good for every for every hour you waste on social media. </p>
+			<div class="social-button notSignedIn" id="google" onclick="googleSignin()">
+				<img src="img/google.png"><p>Sign Up with Google</p>
+			</div>
+			<!--div class="social-button" id="facebook">
+				<img src="img/facebook.svg"><p>Sign Up with Facebook</p>
+			</div-->
+			<div class="social-button notSignedIn" id="twitter">
+				<img src="img/twitter.svg"><p>Sign Up with Twitter</p>
+			</div>
+			<div class="social-button signedIn" id="download">
+				<img src="img/download.png"><p>Download to Do Good</p>
+			</div>
+			<p class="signedIn" id="signOut"> You're signed in with Google. <a href="#" onclick="googleSignout()"> Sign out </a>. </p>
+		</div>
+	
+	</div>
+	<script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyB7TQxznzUlCmouFRUw8SYyBZDDq-kTJ8w",
+	    authDomain: "social-media-for-social-good.firebaseapp.com",
+	    databaseURL: "https://social-media-for-social-good.firebaseio.com",
+	    storageBucket: "social-media-for-social-good.appspot.com",
+	    messagingSenderId: "519091086531"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+	
+	<!-- Google Auth -->
+	<script>
+		var provider = new firebase.auth.GoogleAuthProvider();
+
+		function googleSignin() {
+		   firebase.auth()
+		   
+		   .signInWithPopup(provider).then(function(result) {
+		      var token = result.credential.accessToken;
+		      var user = result.user;
+		
+		      console.log(token)
+		      console.log(user)
+		      $(".signedIn").show();
+		      $(".notSignedIn").hide();
+		   }).catch(function(error) {
+		      var errorCode = error.code;
+		      var errorMessage = error.message;
+		
+		      console.log(error.code)
+		      console.log(error.message)
+		   });
+		}
+
+		function googleSignout() {
+		   firebase.auth().signOut()
+	
+		   .then(function() {
+			$(".signedIn").hide();
+			$(".notSignedIn").show();
+		   }, function(error) {
+		      console.log('Signout Failed')  
+		   });
+		}
+	</script>
+	</body>
+</HTML>
