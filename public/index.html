@@ -18,9 +18,9 @@
 			<!--div class="social-button" id="facebook">
 				<img src="img/facebook.svg"><p>Sign Up with Facebook</p>
 			</div-->
-			<div class="social-button notSignedIn" id="twitter">
+			<!--div class="social-button notSignedIn" id="twitter" onclick="twitterSignin()">
 				<img src="img/twitter.svg"><p>Sign Up with Twitter</p>
-			</div>
+			</div-->
 			<div class="social-button signedIn" id="download">
 				<img src="img/download.png"><p>Download to Do Good</p>
 			</div>
@@ -43,12 +43,13 @@
 	
 	<!-- Google Auth -->
 	<script>
-		var provider = new firebase.auth.GoogleAuthProvider();
+		var googleProvider = new firebase.auth.GoogleAuthProvider();
+		var twitterProvider = new firebase.auth.TwitterAuthProvider();
 
 		function googleSignin() {
 		   firebase.auth()
 		   
-		   .signInWithPopup(provider).then(function(result) {
+		   .signInWithPopup(googleProvider).then(function(result) {
 		      var token = result.credential.accessToken;
 		      var user = result.user;
 		
@@ -75,6 +76,7 @@
 		      console.log('Signout Failed')  
 		   });
 		}
+
 	</script>
 	</body>
 </HTML>
