@@ -89,9 +89,9 @@ p{
 	background-color: white;
 	width: 275px;
 	border-radius: 10px;
-	height: 350px;
+	height: 190px;
 	float: right;
-	margin-top: 10px;
+	margin-top: 40px;
 }
 
 @media (min-width: 1106px) {
@@ -155,4 +155,9 @@ p{
 }
 .signedIn{
  display:none;
+}
+#previewImg{
+	margin-top: -20px;
+	float: right;
+	margin-right: 10px;
 }
